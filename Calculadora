@@ -1,0 +1,88 @@
+#Simple calculadora
+import os
+import math
+gain = 1
+while gain == 1:
+    os.system("clear")
+    print("      <======( Calculadora )========>")
+    gain = 2
+    print("")
+    n1 = float(input("Tu primer numero: "))
+    n2 = float(input("Tu segundo numero: "))
+    opcion = float(input("""    
+    ¿Que operción quieres ejectutar?
+    
+    1) Sumar.
+    2) divir.
+    3) restar.
+    4) multiplicar.
+    5) Raiz cuadrada.
+    6) Cambiar Valores
+    7) Apagar calculadora.
+    
+    R: """))
+    
+    if opcion == 1:
+        print("")
+        print("    [ La suma es de: ",n1+n2,"]")
+        gain = float(input("""
+    ¿Quieres volver a usar la calculadora?
+        
+        1) Si
+        2) No
+        
+        R: """))
+    if opcion == 2:
+        print("")
+        print("   [ La divición es de:",n1/n2,"]")
+        gain = float(input("""
+    ¿Quieres volver a usar la calculadora?
+        
+        1) Si
+        2) No
+        
+        R: """))
+    if opcion == 3:
+        print("")
+        print("   [ La resta es de:",n1-n2,"]")
+        gain = float(input("""
+    ¿Quieres volver a usar la calculadora?
+        
+        1) Si
+        2) No
+        
+        R: """))
+    if opcion == 4:
+        print(" [ La multiplicación es de:",n1*n2,"]")
+        gain = float(input("""
+    ¿Quieres volver a usar la calculadora?
+        
+        1) Si
+        2) No
+        
+        R: """))
+    if opcion == 5:
+        print("""
+¿A que le quieres sacar raiz cuadrada?""")
+        print("")
+        print(" 1)",n1)
+        print(" 2)",n2)
+        opci2 = float(input("R: "))
+        if opci2 == 1:
+            a = math.sqrt(n1)
+            print("")
+            print("La raiz cuadrada de",n1,"es:",a)
+        if opci2 == 2:
+                a = math.sqrt(n2)
+                print("")
+                print("La raiz cuadrada de",n2,"es:",a)
+        else:
+                print("No hay ningun comando asignado con ese valor")
+                ae = input("Dale enter")
+                gain = 1
+    if opcion == 6:
+        gain = 1
+    
+    if opcion == 7:
+        os.system("clear")
+        break;
